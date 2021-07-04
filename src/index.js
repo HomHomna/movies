@@ -18,13 +18,13 @@ function buildCardDOM(movie) {
 
     let IconScore = ''
     let t = movie.tomatoScore
-    if (t < 60 ) {
-        IconScore += `<img class="icon" src="${icons[2].img}" alt="#" />`
+    if (t >= 80 ) {
+        IconScore += `<img class="icon" src="${icons[0].img}" alt="#" />`
     }
-    else if (t < 80) {
+    else if (t < 80 && t >=60) {
         IconScore += `<img class="icon" src="${icons[1].img}" alt="#" />`
     } else {
-        IconScore += `<img class="icon" src="${icons[0].img}" alt="#" />`
+        IconScore += `<img class="icon" src="${icons[2].img}" alt="#" />`
     }
     
     return (
